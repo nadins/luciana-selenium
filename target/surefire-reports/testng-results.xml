@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="lucianna-tests" duration-ms="64325" started-at="2015-05-18T11:30:55Z" finished-at="2015-05-18T11:31:59Z">
+    <groups>
+    </groups>
+    <test name="lucianna.tests" duration-ms="64325" started-at="2015-05-18T11:30:55Z" finished-at="2015-05-18T11:31:59Z">
+      <class name="main.java.testcases.SampleTest">
+        <test-method status="PASS" signature="testRegistration()[pri:0, instance:main.java.testcases.SampleTest@30c7da1e]" name="testRegistration" duration-ms="12094" started-at="2015-05-18T14:31:47Z" finished-at="2015-05-18T14:31:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration -->
+        <test-method status="PASS" signature="testSomeAssert()[pri:0, instance:main.java.testcases.SampleTest@30c7da1e]" name="testSomeAssert" duration-ms="0" started-at="2015-05-18T14:31:59Z" finished-at="2015-05-18T14:31:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSomeAssert -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:main.java.testcases.SampleTest@30c7da1e]" name="testLogin" duration-ms="1" started-at="2015-05-18T14:31:59Z" depends-on-methods="main.java.testcases.SampleTest.testRegistration" finished-at="2015-05-18T14:31:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="testChangePassword()[pri:0, instance:main.java.testcases.SampleTest@30c7da1e]" name="testChangePassword" duration-ms="1" started-at="2015-05-18T14:31:59Z" depends-on-methods="main.java.testcases.SampleTest.testLogin" finished-at="2015-05-18T14:31:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testChangePassword -->
+      </class> <!-- main.java.testcases.SampleTest -->
+      <class name="main.java.testcases.OpenLoginPageTest">
+        <test-method status="PASS" signature="loginWithCorrectCredentials()[pri:0, instance:main.java.testcases.OpenLoginPageTest@67b64c45]" name="loginWithCorrectCredentials" duration-ms="24279" started-at="2015-05-18T14:30:55Z" finished-at="2015-05-18T14:31:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithCorrectCredentials -->
+        <test-method status="PASS" signature="clearCache()[pri:0, instance:main.java.testcases.OpenLoginPageTest@67b64c45]" name="clearCache" is-config="true" duration-ms="10064" started-at="2015-05-18T14:31:19Z" finished-at="2015-05-18T14:31:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCache -->
+        <test-method status="PASS" signature="loginWithInCorrectCredentials()[pri:0, instance:main.java.testcases.OpenLoginPageTest@67b64c45]" name="loginWithInCorrectCredentials" duration-ms="7776" started-at="2015-05-18T14:31:29Z" finished-at="2015-05-18T14:31:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInCorrectCredentials -->
+        <test-method status="PASS" signature="clearCache()[pri:0, instance:main.java.testcases.OpenLoginPageTest@67b64c45]" name="clearCache" is-config="true" duration-ms="10069" started-at="2015-05-18T14:31:37Z" finished-at="2015-05-18T14:31:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCache -->
+      </class> <!-- main.java.testcases.OpenLoginPageTest -->
+    </test> <!-- lucianna.tests -->
+  </suite> <!-- lucianna-tests -->
+</testng-results>
