@@ -2,13 +2,21 @@ package main.java.testcases;
 
 import static main.java.setup.SeleniumDriver.getDriver;
 import static main.java.setup.SeleniumDriver.clearBrowserCache;
+
 import main.java.pages.LuciannaLoginPage;
 import main.java.pages.LuciannaMainPage;
+import main.java.setup.LucianaHelper;
+import org.apache.commons.io.FileUtils;
 import org.junit.AfterClass;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
+
+import java.io.File;
+
 import static org.testng.Assert.*;
 
 /**
@@ -23,14 +31,15 @@ public class OpenLoginPageTest {
 
 
     @Test(groups = {"positive"})
-      public void loginWithCorrectCredentials() {
+    public void loginWithCorrectCredentials() {
         LuciannaLoginPage loginPage = new LuciannaMainPage().open().goToLoginPage();
         loginPage.login(EMAIL, PASSWORD);
+        LucianaHelper.getScreenshot(getDriver());
         assertTrue(loginPage.getWelcomeUser().getText().contains(LOGIN));
     }
 
     @AfterMethod
-    public static void clearCache(){
+    public static void clearCache() {
         clearBrowserCache();
     }
 
@@ -39,7 +48,8 @@ public class OpenLoginPageTest {
 
         LuciannaLoginPage loginPage = new LuciannaMainPage().open().goToLoginPage();
         loginPage.login(EMAIL, INCORRECT_PASSWORD);
-        ExpectedConditions.textToBePresentInElement(loginPage.getWoocommerceError(),LOGIN.toLowerCase());
+        ExpectedConditions.textToBePresentInElement(loginPage.getWoocommerceError(), LOGIN.toLowerCase());
+        LucianaHelper.getScreenshot(getDriver());
         assertTrue(loginPage.getWoocommerceError().getText().contains(EMAIL.toLowerCase().substring(0, 17)));
 
     }
@@ -49,6 +59,5 @@ public class OpenLoginPageTest {
         clearBrowserCache();
         getDriver().quit();
         getDriver().close();
-
     }
 }

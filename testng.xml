@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="lucianna-tests">
-    <test verbose="2" name="lucianna.tests">
-        <packages>
-            <package name="main.java.testcases"/>
-        </packages>
-    </test>
+<!--<suite name="lucianna-tests">-->
+    <!--<test verbose="2" name="lucianna.tests">-->
+        <!--<packages>-->
+            <!--<package name="main.java.testcases"/>-->
+        <!--</packages>-->
+    <!--</test>-->
+<!--</suite>-->
+
+<suite name="Automation Suite"  verbose="1" parallel="tests" thread-count="2">
+<test name="Login Test cases 01" parallel="classes" thread-count="2">
+    <parameter name="Operating_System" value="Windows 7"/>
+    <parameter name="Browser_Name" value="Internet Explorer"/>
+    <parameter name="Browser_Version" value="11"/>
+    <parameter name="Base_URL" value="http://luciana.integro.kiev.ua/"/>
+    <classes>
+        <class name="main.java.testcases.OpenLoginPageTest"/>
+
+    </classes>
+</test>
+<test name="Login Test cases 02" parallel="classes" thread-count="2">
+    <parameter name="Operating_System" value="Windows 7"/>
+    <parameter name="Browser_Name" value="Mozilla Firefox"/>
+    <parameter name="Browser_Version" value="38"/>
+    <parameter name="Base_URL" value="http://luciana.integro.kiev.ua/"/>
+    <classes>
+        <class name="main.java.testcases.SearchTest"/>
+        <class name="main.java.testcases.SampleTest"/>
+    </classes>
+</test>
 </suite>
