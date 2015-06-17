@@ -1,7 +1,5 @@
 package main.java.setup;
 
-import com.mysql.jdbc.PreparedStatement;
-import com.mysql.jdbc.Statement;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

@@ -1,6 +1,5 @@
 package main.java.testcases;
 
-import com.thoughtworks.selenium.Selenium;
 import main.java.pages.LuciannaMainPage;
 import org.junit.AfterClass;
 import org.testng.annotations.Test;

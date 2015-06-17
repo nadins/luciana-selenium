@@ -34,7 +34,7 @@ public class OpenLoginPageTest {
     public void loginWithCorrectCredentials() {
         LuciannaLoginPage loginPage = new LuciannaMainPage().open().goToLoginPage();
         loginPage.login(EMAIL, PASSWORD);
-        LucianaHelper.getScreenshot(getDriver());
+//        LucianaHelper.getScreenshot(getDriver());
         assertTrue(loginPage.getWelcomeUser().getText().contains(LOGIN));
     }
 
@@ -49,7 +49,7 @@ public class OpenLoginPageTest {
         LuciannaLoginPage loginPage = new LuciannaMainPage().open().goToLoginPage();
         loginPage.login(EMAIL, INCORRECT_PASSWORD);
         ExpectedConditions.textToBePresentInElement(loginPage.getWoocommerceError(), LOGIN.toLowerCase());
-        LucianaHelper.getScreenshot(getDriver());
+//        LucianaHelper.getScreenshot(getDriver());
         assertTrue(loginPage.getWoocommerceError().getText().contains(EMAIL.toLowerCase().substring(0, 17)));
 
     }

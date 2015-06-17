@@ -1,8 +1,5 @@
 package main.java.testcases;
 
-import main.java.features.Application;
-import net.thucydides.core.annotations.Story;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
