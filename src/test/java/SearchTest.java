@@ -18,7 +18,7 @@ public class SearchTest {
 
     @Test(groups = {"positive"})
     public void searchTest() {
-        LuciannaMainPage page = new LuciannaMainPage().open();
+        LuciannaMainPage page = new LuciannaMainPage().open(getDriver());
         page.mainPageSearch(TEST);
         try {
             Thread.sleep(5000);

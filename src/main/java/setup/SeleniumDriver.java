@@ -1,19 +1,12 @@
 package main.java.setup;
 
-import com.thoughtworks.selenium.DefaultSelenium;
-import com.thoughtworks.selenium.Selenium;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 public class SeleniumDriver {
 
     static WebDriver driver;
+
 
     public static WebDriver getDriver() {
 

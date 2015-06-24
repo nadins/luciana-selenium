@@ -25,7 +25,7 @@ public class OpenLoginPageTest {
 
     @Test(groups = {"positive"})
     public void loginWithCorrectCredentials() {
-        LuciannaLoginPage loginPage = new LuciannaMainPage().open().goToLoginPage();
+        LuciannaLoginPage loginPage = new LuciannaMainPage().open(getDriver()).goToLoginPage(getDriver());
         loginPage.login(EMAIL, PASSWORD);
         LucianaHelper.getScreenshot(getDriver());
         assertTrue(loginPage.getWelcomeUser().getText().contains(LOGIN));
@@ -39,7 +39,7 @@ public class OpenLoginPageTest {
     @Test(groups = {"negative"})
     public void loginWithInCorrectCredentials() {
 
-        LuciannaLoginPage loginPage = new LuciannaMainPage().open().goToLoginPage();
+        LuciannaLoginPage loginPage = new LuciannaMainPage().open(getDriver()).goToLoginPage(getDriver());
         loginPage.login(EMAIL, INCORRECT_PASSWORD);
         ExpectedConditions.textToBePresentInElement(loginPage.getWoocommerceError(), LOGIN.toLowerCase());
         LucianaHelper.getScreenshot(getDriver());

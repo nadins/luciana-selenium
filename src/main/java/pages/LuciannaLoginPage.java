@@ -1,6 +1,5 @@
 package main.java.pages;
 
-import main.java.setup.LucianaHelper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -38,6 +37,11 @@ public class LuciannaLoginPage extends LuciannaPage<LuciannaLoginPage> {
     }
 
     public void login(String email, String password) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         emailField.sendKeys(email);
         passwordField.sendKeys(password);
         registerButton.click();

@@ -33,6 +33,6 @@ public class SampleTest {
     }
     @Test
     public void testSomeAssert(){
-        System.out.println("Change password");
+        System.out.println("Asserrt");
     }
 }

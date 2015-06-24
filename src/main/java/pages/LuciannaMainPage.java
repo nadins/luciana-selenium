@@ -1,6 +1,7 @@
 package main.java.pages;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -32,12 +33,12 @@ public class LuciannaMainPage extends LuciannaPage<LuciannaMainPage> {
         return "";
     }
 
-    public LuciannaLoginPage goToLoginPage() {
-        return new LuciannaLoginPage().openPage(LuciannaLoginPage.class);
+    public LuciannaLoginPage goToLoginPage(WebDriver driver) {
+        return new LuciannaLoginPage().openPage(LuciannaLoginPage.class, driver);
     }
 
-    public LuciannaMainPage open() {
-        return new LuciannaMainPage().openPage(LuciannaMainPage.class);
+    public LuciannaMainPage open(WebDriver driver) {
+        return new LuciannaMainPage().openPage(LuciannaMainPage.class, driver);
     }
 
     public void mainPageSearch(String text){
